@@ -1,6 +1,13 @@
 # Discord Japanese Study Pipeline
 
-Discord bot and parser pipeline for exporting Japanese study notes from Discord, structuring them, and generating NotebookLM-ready materials.
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Discord Bot](https://img.shields.io/badge/Discord-Bot-5865F2.svg)](https://discord.com/developers/docs/intro)
+[![NotebookLM Ready](https://img.shields.io/badge/NotebookLM-Ready-34A853.svg)](https://notebooklm.google/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
+
+Turn a Discord study channel into structured Japanese learning data.
+
+This project helps you export Japanese vocabulary and grammar notes from Discord, keep incremental checkpoints, normalize raw messages into study entries, and generate NotebookLM-ready Markdown for summaries, quizzes, and future review tools.
 
 ## Screenshots
 
@@ -189,6 +196,8 @@ data/
   raw/
   normalized/
   notebooklm/
+docs/
+  images/
 ```
 
 ## Output Files
