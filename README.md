@@ -1,5 +1,7 @@
 # kotoba-flow
 
+[中文](README.zh-TW.md)
+
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 [![Discord Bot](https://img.shields.io/badge/Discord-Bot-5865F2.svg)](https://discord.com/developers/docs/intro)
 [![NotebookLM Ready](https://img.shields.io/badge/NotebookLM-Ready-34A853.svg)](https://notebooklm.google/)
@@ -61,7 +63,7 @@ Recommended:
 - `Grammar:`, `Meaning:`, and `Example:` are also supported
 - vocabulary notes can stay more natural, but consistent formatting improves accuracy
 
-Example:
+Examples:
 
 ```text
 文法：〜ようにする
@@ -93,11 +95,9 @@ Example: 毎日日本語を勉強するようにしている。
 
 Full implementation guide:
 
-- [docs/backend_deployment_guide.md](docs/backend_deployment_guide.md)
+- [Backend and deployment guide](docs/backend_deployment_guide.md)
 
-## English
-
-### Overview
+## Overview
 
 This project helps you:
 
@@ -107,7 +107,7 @@ This project helps you:
 - generate Markdown files for NotebookLM
 - prepare data for future review apps or flashcards
 
-### Features
+## Features
 
 - private channel export with slash commands
 - incremental export with per-channel checkpoints
@@ -116,7 +116,7 @@ This project helps you:
 - starter parser for vocabulary and grammar notes
 - NotebookLM-friendly Markdown generation
 
-### Slash Commands
+## Slash Commands
 
 - `/export_here`
   Export only new messages since the last checkpoint
@@ -129,7 +129,7 @@ This project helps you:
 - `/whoami`
   Show your Discord user ID
 
-### Required Discord Settings
+## Required Discord Settings
 
 - Bot permissions:
   - `View Channel`
@@ -138,72 +138,6 @@ This project helps you:
   - `Use Application Commands`
 - Developer Portal:
   - enable `Message Content Intent`
-
-### Basic Workflow
-
-1. Create a bot in Discord Developer Portal.
-2. Enable the required intents and bot settings.
-3. Invite the bot to your server.
-4. Add the bot token and Discord IDs to `.env`.
-5. Start the bot locally from your terminal.
-6. Run `/export_here` in the target channel.
-7. Save the export as JSON and continue with normalization.
-
-## 中文
-
-### 專案用途
-
-這個專案用來把 Discord 頻道中的日文單字與文法筆記整理成可複習資料。
-
-你可以用它：
-
-- 用 bot 匯出 Discord 頻道訊息
-- 記住每個頻道的上次匯出位置，做增量匯出
-- 把原始訊息轉成結構化學習條目
-- 產生適合餵給 NotebookLM 的 Markdown
-- 為之後的複習軟體或單字卡做準備
-
-### 簡單流程
-
-1. 在 Discord Developer Portal 建立 bot
-2. 開啟需要的設定，尤其是 `Message Content Intent`
-3. 用正確的 OAuth2 scope 和權限把 bot 邀請進 server
-4. 把 bot token 和 Discord 相關 ID 填進本機 `.env`
-5. 在終端機啟動 bot
-6. 回到指定頻道執行 `/export_here`
-7. 匯出成 JSON 後再交給 parser 處理
-
-### 主要功能
-
-- 私人頻道 slash command 匯出
-- 頻道級 checkpoint 增量匯出
-- 可重新完整匯出
-- 保留原始 JSON 匯出檔
-- 基礎單字與文法解析
-- 生成 NotebookLM 可讀 Markdown
-
-### Slash Commands
-
-- `/export_here`
-  只匯出上次之後新增的訊息
-- `/export_here full_export:true`
-  忽略 checkpoint，重新完整匯出
-- `/export_status`
-  查看目前頻道的匯出記錄點
-- `/export_reset_here`
-  清除目前頻道的匯出記錄點
-- `/whoami`
-  顯示你的 Discord 使用者 ID
-
-### Discord 端需求
-
-- Bot 權限：
-  - `View Channel`
-  - `Read Message History`
-  - `Send Messages`
-  - `Use Application Commands`
-- Developer Portal：
-  - 開啟 `Message Content Intent`
 
 ## Project Structure
 
@@ -220,6 +154,7 @@ data/
   notebooklm/
 docs/
   images/
+examples/
 ```
 
 ## Output Files
