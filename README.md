@@ -58,6 +58,7 @@ Recommended:
 - add `文法：` for grammar notes
 - add `意思：` for meanings when possible
 - add `例文：` for example sentences
+- `Grammar:`, `Meaning:`, and `Example:` are also supported
 - vocabulary notes can stay more natural, but consistent formatting improves accuracy
 
 Example:
@@ -66,6 +67,12 @@ Example:
 文法：〜ようにする
 意思：盡量做到...
 例文：毎日日本語を勉強するようにしている。
+```
+
+```text
+Grammar: 〜ようにする
+Meaning: try to make it a habit to...
+Example: 毎日日本語を勉強するようにしている。
 ```
 
 ```text
